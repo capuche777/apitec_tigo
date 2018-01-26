@@ -22,4 +22,14 @@ if (plan_usuario == 1) {
         }
     }
     alert(`El total a pagar es:\n Q.${total}`);
+} else if (plan_usuario == 2) {
+    if (minutos_consumidos > 200) {
+        total = (total + (minutos_consumidos - 200) * 4);
+        if (datos_consumidos > 1000) {
+            total = (total + (datos_consumidos - 1000));
+            if (mensajes_enviados > 100) {
+                total = (total + (mensajes_enviados - 100) * 0.5);
+            }
+        }
+    }
 }
